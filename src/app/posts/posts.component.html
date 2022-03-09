@@ -1,7 +1,7 @@
-<p>posts works!</p>
 
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="container">
+  <h1 class="mt-5">Posts</h1>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -29,5 +29,10 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+
+</div>
+
   
   
